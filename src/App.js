@@ -1,13 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import Colors from './components/ColorCard';
+import Bar from './components/Bar';
 
 function App() {
   let colorArr = [];
   colorArr.length=10;
   colorArr.fill(0);
   return (
-    <div className="container">
+    <>
+    <Bar></Bar>
+    <div className="container collection-div">
       <div className='row'>
         {colorArr.map((ele,ind)=>(
           <div className='col-lg-3'>
@@ -16,6 +19,7 @@ function App() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
